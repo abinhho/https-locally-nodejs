@@ -7,6 +7,9 @@ const https = require('https');
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+// Or
+// app.use(express.static('public'))
+
 const port = 4443;
 
 httpsLocalhost.getCerts().then(certs => {
